@@ -62,6 +62,7 @@ export const SocialMediaSection = () => {
           imagePath={platform.imagePath}
           handle={platform.handle}
           background={platform.background}
+          link={platform.link}
         />
       ))}
     </div>

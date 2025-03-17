@@ -4,11 +4,13 @@ const SocialIcon = ({ platform, imagePath, handle, background, link }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <div
+    <button
       className={`cursor-pointer flex flex-row rounded-md ${background} relative overflow-hidden transition-all duration-300 pl-1 pr-1 ${isHovering ? "w-40" : "w-14"}`}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
-      onClick={() => window.open(link, "_blank")}
+      onClick={() => {
+        window.open(link);
+      }}
     >
       <img
         src={imagePath}
@@ -27,7 +29,7 @@ const SocialIcon = ({ platform, imagePath, handle, background, link }) => {
           {handle}
         </span>
       </div>
-    </div>
+    </button>
   );
 };
 
