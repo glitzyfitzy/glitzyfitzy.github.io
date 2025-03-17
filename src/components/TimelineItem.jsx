@@ -13,8 +13,8 @@ export const TimelineItem = ({
       {/* Left side content */}
       <div className={`w-5/12 ${isLeft ? "pr-4" : ""}`}>
         {isLeft && (
-          <>
-            <div className="flex flex-row justify-between">
+          <div className="shadow-md rounded-md p-2">
+            <div className="flex flex-row justify-between ">
               <div>
                 <h3 className="text-xl font-semibold">
                   {company} | {role}
@@ -30,7 +30,7 @@ export const TimelineItem = ({
               />
             </div>
             <p className="text-gray-700">{description}</p>
-          </>
+          </div>
         )}
       </div>
 
@@ -54,7 +54,7 @@ export const TimelineItem = ({
       {/* Right side content */}
       <div className={`w-5/12 ${!isLeft ? "pl-4" : ""}`}>
         {!isLeft && (
-          <>
+          <div className="shadow-md rounded-md p-2">
             <div className="flex flex-row justify-between">
               <img
                 src={logo}
@@ -71,7 +71,7 @@ export const TimelineItem = ({
               </div>
             </div>
             <p className="text-right text-gray-700">{description}</p>
-          </>
+          </div>
         )}
       </div>
     </div>
