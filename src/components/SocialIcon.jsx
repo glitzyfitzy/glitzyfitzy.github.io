@@ -5,7 +5,7 @@ const SocialIcon = ({ platform, imagePath, handle, background, link }) => {
 
   return (
     <button
-      className={`cursor-pointer flex flex-row rounded-md ${background} relative overflow-hidden transition-all duration-300 pl-1 pr-1 ${isHovering ? "w-40" : "w-14"}`}
+      className={`cursor-pointer flex flex-row rounded-md relative overflow-hidden transition-all duration-300 pl-1 pr-1 ${isHovering ? "w-40" : "w-14"}`}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onClick={() => {
@@ -19,16 +19,6 @@ const SocialIcon = ({ platform, imagePath, handle, background, link }) => {
         height="48"
         className="z-10"
       />
-      <div
-        className={`flex flex-col justify-center transition-opacity duration-300 ${isHovering ? "opacity-100 w-40" : "opacity-0 w-0"}`}
-      >
-        <span className="text-lg font-bold text-white whitespace-nowrap pt-1">
-          {platform}
-        </span>
-        <span className="text-lg text-white whitespace-nowrap pb-1">
-          {handle}
-        </span>
-      </div>
     </button>
   );
 };

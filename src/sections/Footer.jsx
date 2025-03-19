@@ -7,7 +7,7 @@ import youtube from "../assets/youtube.svg";
 import pintrest from "../assets/pintrest.svg";
 import linkedin from "../assets/linkedin.svg";
 
-export const SocialMediaSection = () => {
+export const Footer = () => {
   const socialPlatforms = [
     {
       platform: "Instagram",
@@ -54,7 +54,7 @@ export const SocialMediaSection = () => {
   ];
 
   return (
-    <div className="p-8 w-full flex flex-wrap justify-center space-x-8">
+    <div className="flex flex-row justify-center">
       {socialPlatforms.map((platform, index) => (
         <SocialIcon
           key={index}
