@@ -2,12 +2,28 @@ import React, { useState, useEffect } from "react";
 
 export const SplashScreen = ({ minimumDisplayTime = 3000, onDone }) => {
   const [isVisible, setIsVisible] = useState(true);
+  const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
+    // Fade in
+    setTimeout(() => {
+      setOpacity(1);
+    }, 100);
+
+    // Fade out and then hide
     const timer = setTimeout(() => {
-      setIsVisible(false);
-      if (onDone) onDone();
-    }, minimumDisplayTime);
+      setOpacity(0);
+
+      // Wait for fade out animation to complete before hiding
+      setTimeout(() => {
+        setIsVisible(false);
+
+        // Add 0.5 second delay before calling onDone (which would start the GIF)
+        // setTimeout(() => {
+        if (onDone) onDone();
+        // }, 500);
+      }, 1000); // 1 second for fade out
+    }, minimumDisplayTime - 1000); // Start fade out 1 second before minimum display time ends
 
     return () => clearTimeout(timer);
   }, [minimumDisplayTime, onDone]);
@@ -16,7 +32,11 @@ export const SplashScreen = ({ minimumDisplayTime = 3000, onDone }) => {
 
   return (
     <div
-      className={`fixed inset-0 flex items-center justify-center bg-slate-900 z-50 transition-opacity duration-3000 ${!onDone ? "opacity-0" : "opacity-100"}`}
+      className="fixed inset-0 flex items-center justify-center bg-text z-50"
+      style={{
+        opacity: opacity,
+        transition: "opacity 1s ease-in-out",
+      }}
     >
       <div className="text-center w-full max-w-2xl px-4">
         <svg
@@ -38,18 +58,18 @@ export const SplashScreen = ({ minimumDisplayTime = 3000, onDone }) => {
             @GlitzyFitzy
           </text>
           <style>{`
-                      .text-path {
-                        stroke-dasharray: 500;
-                        stroke-dashoffset: 500;
-                        animation: dash 2s linear forwards;
-                      }
+            .text-path {
+              stroke-dasharray: 500;
+              stroke-dashoffset: 500;
+              animation: dash 1s linear forwards;
+            }
 
-                      @keyframes dash {
-                        to {
-                          stroke-dashoffset: 0;
-                        }
-                      }
-                    `}</style>
+            @keyframes dash {
+              to {
+                stroke-dashoffset: 0;
+              }
+            }
+          `}</style>
         </svg>
       </div>
     </div>
