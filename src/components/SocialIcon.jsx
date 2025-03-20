@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 
-const SocialIcon = ({ platform, imagePath, handle, background, link }) => {
-  const [isHovering, setIsHovering] = useState(false);
-
+const SocialIcon = ({ icon, link }) => {
   return (
     <button
-      className={`cursor-pointer flex flex-row rounded-md relative overflow-hidden transition-all duration-300 pl-1 pr-1 ${isHovering ? "w-40" : "w-14"}`}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
+      className={`cursor-pointer flex flex-row rounded-md relative overflow-hidden`}
       onClick={() => {
         window.open(link);
       }}
     >
-      <img
-        src={imagePath}
-        alt={`${platform} icon`}
-        width="48"
-        height="48"
-        className="z-10"
-      />
+      <svg
+        width={"48"}
+        height={"48"}
+        fill={"var(--color-icon)"}
+        viewBox={icon.viewBox}
+        fillRule={"evenodd"}
+        clipRule={"evenodd"}
+        stroke={"var(--color-icon)"}
+        className={"z-10 var(--color-icon)"}
+      >
+        <path d={icon.path} />
+      </svg>
     </button>
   );
 };

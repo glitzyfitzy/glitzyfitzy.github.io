@@ -5,7 +5,7 @@ import { Profile } from "./sections/Profile";
 
 function App() {
   return (
-    <div className="flex flex-col justify-center content-center h-screen">
+    <div className="flex flex-col justify-center content-center h-screen bg-background">
       <Header />
       <Splitter />
       <Profile />

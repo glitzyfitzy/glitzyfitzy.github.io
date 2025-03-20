@@ -1,4 +1,4 @@
-import profile from "../assets/profile.jpg";
+import profile from "/profile.jpg";
 
 export const Profile = () => {
   return (
