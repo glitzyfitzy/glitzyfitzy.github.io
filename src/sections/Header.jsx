@@ -5,10 +5,8 @@ export const Header = () => {
         Hayley Fitzsimmons
       </h1>
       <div className="flex flex-row justify-center mt-2">
-        <button className="ml-4 mr-4 text-2xl font-theano-didot">about</button>
-        <button className="ml-4 mr-4 text-2xl font-theano-didot">
-          porfolio
-        </button>
+        <button className="ml-4 mr-4 text-2xl font-futura">ABOUT</button>
+        <button className="ml-4 mr-4 text-2xl font-futura">PORTFOLIO</button>
       </div>
     </div>
   );
