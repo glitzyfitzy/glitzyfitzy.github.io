@@ -13,20 +13,12 @@ export const Footer = () => {
       link: "https://www.tiktok.com/@glitzyfitzy",
     },
     {
-      icon: Icons.facebook,
-      link: "https://www.facebook.com/hayley.fitzsimmons.14",
-    },
-    {
-      icon: Icons.youtube,
-      link: "https://www.youtube.com/@GlitzyFitzy",
+      icon: Icons.linkedin,
+      link: "https://www.linkedin.com/in/hayley-fitz-120600",
     },
     {
       icon: Icons.pintrest,
       link: "https://www.pinterest.com/glitzyfitzy/",
-    },
-    {
-      icon: Icons.linkedin,
-      link: "https://www.linkedin.com/in/hayley-fitz-120600",
     },
   ];
 

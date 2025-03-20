@@ -4,9 +4,11 @@ export const Header = () => {
       <h1 className="text-center text-8xl font-milton-one">
         Hayley Fitzsimmons
       </h1>
-      <div className="flex flex-row justify-center">
-        <button className="ml-4 mr-4 text-4xl">about</button>
-        <button className="ml-4 mr-4 text-4xl">porfolio</button>
+      <div className="flex flex-row justify-center mt-2">
+        <button className="ml-4 mr-4 text-2xl font-theano-didot">about</button>
+        <button className="ml-4 mr-4 text-2xl font-theano-didot">
+          porfolio
+        </button>
       </div>
     </div>
   );

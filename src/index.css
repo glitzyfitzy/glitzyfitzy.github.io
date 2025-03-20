@@ -16,16 +16,19 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Theano_Didot";
+    src: url("/fonts/Theano_Didot_Regular") format("tiff");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
 @theme {
     --font-milton-one: "Milton_One";
+    --font-theano-didot: "Theano_Didot";
     --color-background: #ffffff;
     --color-splitter: #000000;
     --color-text: #000000;
     --color-icon: #000000;
-}
-
-@layer base {
-    html {
-        font-family: "Milton_One", system-ui, sans-serif;
-    }
 }
