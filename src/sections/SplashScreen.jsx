@@ -1,43 +1,94 @@
 import React, { useState, useEffect } from "react";
 
-/**
- * Splash Screen Component
- * Displays an animated text logo that fades in, animates, then fades out
- *
- * @param {number} minimumDisplayTime - Minimum time in ms to show the splash screen (default: 3500ms)
- * @param {function} onDone - Callback function executed when splash screen finishes
- */
-export const SplashScreen = ({ minimumDisplayTime = 5000, onDone }) => {
-  // Controls visibility of entire component
+export const SplashScreen = ({ minimumDisplayTime = 3500, onDone }) => {
   const [isVisible, setIsVisible] = useState(true);
-  // Controls fade in/out opacity animation
   const [opacity, setOpacity] = useState(0);
-  // Use a fixed path length value that works across browsers
+  const [browserType, setBrowserType] = useState("default");
 
+  // Detect browser on component mount
   useEffect(() => {
-    // Fade in effect (slight delay for better user experience)
+    // Browser detection function
+    const detectBrowser = () => {
+      // Firefox detection
+      if (navigator.userAgent.indexOf("Firefox") !== -1) {
+        return "firefox";
+      }
+      // Safari detection
+      else if (
+        /^((?!chrome|android).)*safari/i.test(navigator.userAgent) ||
+        (navigator.vendor && navigator.vendor.indexOf("Apple") > -1)
+      ) {
+        return "safari";
+      }
+      // Chrome detection
+      else if (
+        navigator.userAgent.indexOf("Chrome") !== -1 &&
+        navigator.vendor &&
+        navigator.vendor.indexOf("Google") > -1
+      ) {
+        return "chrome";
+      }
+      // Default for other browsers
+      else {
+        return "default";
+      }
+    };
+
+    setBrowserType(detectBrowser());
+
+    // Fade in effect
     setTimeout(() => {
       setOpacity(1);
     }, 100);
 
-    // Schedule fade out sequence
+    // Fade out and hide
     const timer = setTimeout(() => {
-      // Start the fade out
       setOpacity(0);
-
-      // Wait for fade out animation to complete before unmounting component
       setTimeout(() => {
         setIsVisible(false);
-        // Execute callback when fully finished
         onDone();
-      }, 1000); // 1 second for fade out duration
-    }, minimumDisplayTime - 1000); // Start fade out 1 second before minimum display time ends
+      }, 1000);
+    }, minimumDisplayTime - 1000);
 
-    // Cleanup function to clear timeout if component unmounts early
     return () => clearTimeout(timer);
   }, [minimumDisplayTime, onDone]);
 
-  // Don't render anything if not visible
+  // Get animation parameters based on browser
+  const getAnimationParams = () => {
+    switch (browserType) {
+      case "firefox":
+        return {
+          duration: "3s",
+          timing: "linear",
+          delay: "0.5s",
+          dasharray: 1000,
+        };
+      case "safari":
+        return {
+          duration: "2s",
+          timing: "linear",
+          delay: "0.2s",
+          dasharray: 800,
+        };
+      case "chrome":
+        return {
+          duration: "2.5s",
+          timing: "linear",
+          delay: "1s",
+          dasharray: 800,
+        };
+      default:
+        return {
+          duration: "3s",
+          timing: "linear",
+          delay: "0.5s",
+          dasharray: 1000,
+        };
+    }
+  };
+
+  const params = getAnimationParams();
+
   if (!isVisible) return null;
 
   return (
@@ -45,7 +96,7 @@ export const SplashScreen = ({ minimumDisplayTime = 5000, onDone }) => {
       className="fixed inset-0 flex items-center justify-center bg-text z-50"
       style={{
         opacity: opacity,
-        transition: "opacity 1s ease-in-out", // CSS transition for smooth fade in/out
+        transition: "opacity 1s ease-in-out",
       }}
     >
       <div className="text-center w-full max-w-2xl px-4">
@@ -57,52 +108,36 @@ export const SplashScreen = ({ minimumDisplayTime = 5000, onDone }) => {
           <text
             x="50%"
             y="50%"
-            textAnchor="middle" // Centers text horizontally
-            dominantBaseline="middle" // Centers text vertically
-            fill="none" // Text has no fill
-            stroke="#f5f5f5" // Text outline color
-            strokeWidth="1" // Text outline thickness
+            textAnchor="middle"
+            dominantBaseline="middle"
+            fill="none"
+            stroke="#f5f5f5"
+            strokeWidth="1"
             className="text-path font-milton-one text-8xl"
           >
             @GlitzyFitzy
           </text>
           <defs>
-            {/*
-              SVG Animation Styling
-              - Safari requires styles to be in <defs> for proper compatibility
-              - type="text/css" helps with cross-browser support
-            */}
             <style type="text/css">{`
-              /*
-               * Text drawing animation
-               * Creates a writing effect by animating the dashoffset from
-               * full length to zero, gradually revealing the text
-               */
               @keyframes dash {
                 from {
-                  stroke-dashoffset: 1200; /* Start with full offset (invisible) */
+                  stroke-dashoffset: ${params.dasharray};
                 }
                 to {
-                  stroke-dashoffset: 0;   /* End with zero offset (fully visible) */
+                  stroke-dashoffset: 0;
                 }
               }
 
               .text-path {
-                /*
-                 * dasharray defines the length of dashes and gaps
-                 * Setting it to total path length creates one continuous dash
-                 */
-                stroke-dasharray: 1200;
-                stroke-dashoffset: 1200;    /* Explicitly set initial state */
-
-                /* The animation properties - Safari-compatible approach */
+                stroke-dasharray: ${params.dasharray};
+                stroke-dashoffset: ${params.dasharray};
                 animation-name: dash;
-                animation-duration: 5s;
-                animation-timing-function: linear;
-                animation-delay: 0.5s;
+                animation-duration: ${params.duration};
+                animation-timing-function: ${params.timing};
+                animation-delay: ${params.delay};
                 animation-iteration-count: 1;
                 animation-direction: normal;
-                animation-fill-mode: forwards; /* Critical for Safari */
+                animation-fill-mode: forwards;
                 animation-play-state: running;
               }
             `}</style>
