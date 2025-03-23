@@ -2,51 +2,18 @@ import React, { useState, useRef, useEffect } from "react";
 
 export const GifPlayer = ({ gifUrl, lastFrameUrl, gifDuration = 3000 }) => {
   const [isGifComplete, setIsGifComplete] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
   const gifRef = useRef(null);
 
-  // Reset GIF by forcing reload
-  const resetGif = () => {
+  useEffect(() => {
+    // First, reset the GIF
     setIsGifComplete(false);
-    setIsLoaded(false);
 
     // Force browser to reload GIF from beginning by adding timestamp to URL
     if (gifRef.current) {
       const timestamp = new Date().getTime();
       gifRef.current.src = `${gifUrl}${gifUrl.includes("?") ? "&" : "?"}_t=${timestamp}`;
     }
-  };
-
-  useEffect(() => {
-    // First, reset the GIF
-    resetGif();
-
-    // Wait 1 second to let the GIF start playing
-    // const playTimer = setTimeout(() => {
-    //   // Then call handleGifComplete to show the last frame
-    //   handleGifComplete();
-    // }, 2000);
-
-    // return () => clearTimeout(playTimer);
-  }, []); // Empty dependency array for one-time execution
-
-  // useEffect(() => {
-  //   let timer;
-
-  //   // Only start timer after GIF has loaded
-  //   if (isLoaded && !isGifComplete) {
-  //     timer = setTimeout(() => {
-  //       setIsGifComplete(true);
-  //     }, gifDuration);
-  //   }
-
-  //   return () => clearTimeout(timer);
-  // }, [isLoaded, isGifComplete, gifDuration]);
-
-  // Function to handle manual completion
-  const handleGifComplete = () => {
-    setIsGifComplete(true);
-  };
+  }, []);
 
   return (
     <div
@@ -70,7 +37,6 @@ export const GifPlayer = ({ gifUrl, lastFrameUrl, gifDuration = 3000 }) => {
           src={gifUrl}
           alt="Animated GIF"
           className="w-full h-full object-cover"
-          onLoad={() => setIsLoaded(true)}
         />
       )}
 

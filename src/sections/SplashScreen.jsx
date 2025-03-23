@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export const SplashScreen = ({ minimumDisplayTime = 3000, onDone }) => {
+export const SplashScreen = ({ minimumDisplayTime = 3500, onDone }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [opacity, setOpacity] = useState(0);
 
@@ -17,14 +17,9 @@ export const SplashScreen = ({ minimumDisplayTime = 3000, onDone }) => {
       // Wait for fade out animation to complete before hiding
       setTimeout(() => {
         setIsVisible(false);
-
-        // Add 0.5 second delay before calling onDone (which would start the GIF)
-        // setTimeout(() => {
-        if (onDone) onDone();
-        // }, 500);
+        onDone();
       }, 1000); // 1 second for fade out
     }, minimumDisplayTime - 1000); // Start fade out 1 second before minimum display time ends
-
     return () => clearTimeout(timer);
   }, [minimumDisplayTime, onDone]);
 
@@ -61,7 +56,8 @@ export const SplashScreen = ({ minimumDisplayTime = 3000, onDone }) => {
             .text-path {
               stroke-dasharray: 500;
               stroke-dashoffset: 500;
-              animation: dash 1s linear forwards;
+              animation: dash 2s linear forwards;
+              animation-delay: 0.2s;
             }
 
             @keyframes dash {
