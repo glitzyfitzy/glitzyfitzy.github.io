@@ -10,13 +10,13 @@ export const Header = () => {
     {
       id: 1,
       title: "Home",
-      link: "#",
+      link: "/",
       dropdown: null,
     },
     {
       id: 2,
       title: "About",
-      link: "#",
+      link: "/about",
       dropdown: null,
     },
     {
@@ -29,18 +29,34 @@ export const Header = () => {
           title: "Kendra Scott",
           link: null, // unclickable
           subDropdown: [
-            { id: 311, title: "Instagram", link: "#" },
-            { id: 312, title: "TikTok", link: "#" },
-            { id: 313, title: "College Tour", link: "#" },
-            { id: 314, title: "Celebrity & Influencer", link: "#" },
-            { id: 315, title: "Photo Shoot BTS", link: "#" },
-            { id: 316, title: "Events", link: "#" },
+            {
+              id: 311,
+              title: "Instagram",
+              link: "/portfolio/kendra/instagram",
+            },
+            { id: 312, title: "TikTok", link: "/portfolio/kendra/tiktok" },
+            {
+              id: 313,
+              title: "College Tour",
+              link: "/portfolio/kendra/college_tour",
+            },
+            {
+              id: 314,
+              title: "Celebrity & Influencer",
+              link: "/portfolio/kendra/celebrity_influencer",
+            },
+            {
+              id: 315,
+              title: "Photo Shoot BTS",
+              link: "/portfolio/kendra/photo_shoot_bts",
+            },
+            { id: 316, title: "Events", link: "/portfolio/kendra/events" },
           ],
         },
         {
           id: 32,
           title: "UT Austin",
-          link: "#",
+          link: "/portfolio/ut_austin",
           subDropdown: null,
         },
       ],
@@ -48,13 +64,13 @@ export const Header = () => {
     {
       id: 4,
       title: "Glitzy Fitzy",
-      link: "#",
+      link: "/glitzy_fitzy",
       dropdown: null,
     },
     {
       id: 5,
       title: "Contact",
-      link: "#",
+      link: "/contact",
       dropdown: null,
     },
   ];
@@ -103,7 +119,7 @@ export const Header = () => {
                 {item.link ? (
                   <a
                     href={item.link}
-                    className="flex items-center relative h-full py-4 px-6 font-semibold text-gray-800 transition duration-300 hover:text-blue-500"
+                    className="flex items-center relative h-full py-4 px-6 font-semibold text-gray-800 transition duration-300 hover:text-accent"
                   >
                     {item.title}
                     {item.dropdown && (
@@ -125,7 +141,7 @@ export const Header = () => {
 
                     {/* Dot indicator */}
                     <span
-                      className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-blue-500 rounded-full transition-all duration-300 ${
+                      className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-accent rounded-full transition-all duration-300 ${
                         activeDropdown === item.id
                           ? "opacity-100 scale-100"
                           : "opacity-0 scale-0"
@@ -133,7 +149,7 @@ export const Header = () => {
                     ></span>
                   </a>
                 ) : (
-                  <span className="flex items-center relative h-full py-4 px-6 font-semibold text-gray-800 transition duration-300 hover:text-blue-500 cursor-default">
+                  <span className="flex items-center relative h-full py-4 px-6 font-semibold text-gray-800 transition duration-300 hover:text-accent cursor-default">
                     {item.title}
                     {item.dropdown && (
                       <svg
@@ -154,7 +170,7 @@ export const Header = () => {
 
                     {/* Dot indicator */}
                     <span
-                      className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-blue-500 rounded-full transition-all duration-300 ${
+                      className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-accent rounded-full transition-all duration-300 ${
                         activeDropdown === item.id
                           ? "opacity-100 scale-100"
                           : "opacity-0 scale-0"
@@ -171,7 +187,7 @@ export const Header = () => {
                         {dropdownItem.link ? (
                           <a
                             href={dropdownItem.link}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white"
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent hover:text-white"
                           >
                             {dropdownItem.title}
                           </a>
@@ -182,7 +198,7 @@ export const Header = () => {
                                 dropdownItem.subDropdown &&
                                 handleSubMenuClick(e, dropdownItem.id)
                               }
-                              className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white cursor-pointer flex items-center justify-between"
+                              className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-accent hover:text-white cursor-pointer flex items-center justify-between"
                             >
                               <span>{dropdownItem.title}</span>
                               {dropdownItem.subDropdown && (
@@ -212,7 +228,7 @@ export const Header = () => {
                                       <a
                                         key={subDropdownItem.id}
                                         href={subDropdownItem.link}
-                                        className="block px-6 py-2 text-sm text-gray-700 hover:bg-blue-500 hover:text-white border-l-2 border-blue-300"
+                                        className="block px-6 py-2 text-sm text-gray-700 hover:bg-accent hover:text-white border-l-2 border-accent"
                                       >
                                         {subDropdownItem.title}
                                       </a>

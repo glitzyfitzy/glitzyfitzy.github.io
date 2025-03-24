@@ -1,3 +1,3 @@
 export const About = () => {
-  return <div>HELLOS</div>;
+  return <div className="flex justify-center">About</div>;
 };
