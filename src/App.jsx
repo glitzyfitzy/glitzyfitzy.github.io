@@ -1,7 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./routes/Home";
 import { Layout } from "./routes/Layout";
-import { Router } from "react-router";
 import { About } from "./routes/About";
 import { Contact } from "./routes/Contact";
 import { Instagram } from "./routes/portfolio/kendra/Instagram";
@@ -13,9 +12,9 @@ import { Events } from "./routes/portfolio/kendra/Events";
 import { UT_Austin } from "./routes/portfolio/UT_Austin";
 import { Glitzy_Fitzy } from "./routes/Glitzy_Fitzy";
 
-function App() {
+export const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -38,8 +37,6 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
-}
-
-export default App;
+};

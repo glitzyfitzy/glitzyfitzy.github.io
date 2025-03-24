@@ -10,13 +10,13 @@ export const Header = () => {
     {
       id: 1,
       title: "Home",
-      link: "/",
+      link: "/#/",
       dropdown: null,
     },
     {
       id: 2,
       title: "About",
-      link: "/about",
+      link: "/#/about",
       dropdown: null,
     },
     {
@@ -32,31 +32,31 @@ export const Header = () => {
             {
               id: 311,
               title: "Instagram",
-              link: "/portfolio/kendra/instagram",
+              link: "/#/portfolio/kendra/instagram",
             },
-            { id: 312, title: "TikTok", link: "/portfolio/kendra/tiktok" },
+            { id: 312, title: "TikTok", link: "/#/portfolio/kendra/tiktok" },
             {
               id: 313,
               title: "College Tour",
-              link: "/portfolio/kendra/college_tour",
+              link: "/#/portfolio/kendra/college_tour",
             },
             {
               id: 314,
               title: "Celebrity & Influencer",
-              link: "/portfolio/kendra/celebrity_influencer",
+              link: "/#/portfolio/kendra/celebrity_influencer",
             },
             {
               id: 315,
               title: "Photo Shoot BTS",
-              link: "/portfolio/kendra/photo_shoot_bts",
+              link: "/#/portfolio/kendra/photo_shoot_bts",
             },
-            { id: 316, title: "Events", link: "/portfolio/kendra/events" },
+            { id: 316, title: "Events", link: "/#/portfolio/kendra/events" },
           ],
         },
         {
           id: 32,
           title: "UT Austin",
-          link: "/portfolio/ut_austin",
+          link: "/#/portfolio/ut_austin",
           subDropdown: null,
         },
       ],
@@ -64,13 +64,13 @@ export const Header = () => {
     {
       id: 4,
       title: "Glitzy Fitzy",
-      link: "/glitzy_fitzy",
+      link: "/#/glitzy_fitzy",
       dropdown: null,
     },
     {
       id: 5,
       title: "Contact",
-      link: "/contact",
+      link: "/#/contact",
       dropdown: null,
     },
   ];
