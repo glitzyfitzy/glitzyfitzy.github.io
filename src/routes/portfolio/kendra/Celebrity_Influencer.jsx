@@ -1,11 +1,31 @@
+import { GifPlayer } from "../../../components/GifPlayer";
 import { MediaFeature } from "../../../sections/portfolio/MediaFeature";
-import { TitleImage } from "../../../sections/portfolio/TitleImage";
+import { TitleBanner } from "../../../sections/portfolio/TitleBanner";
 import { TitleSplitter } from "../../../sections/portfolio/TitleSplitter";
 
 export const Celebrity_Influencer = () => {
+  const images = [
+    {
+      src: "/images/portfolio/kendra/celebrity_influencer/Banner1.PNG",
+      alt: "Amber",
+    },
+    {
+      src: "/images/portfolio/kendra/celebrity_influencer/Banner2.PNG",
+      alt: "Lainey",
+    },
+    {
+      src: "/images/portfolio/kendra/celebrity_influencer/Banner3.PNG",
+      alt: "Quinn",
+    },
+    {
+      src: "/images/portfolio/kendra/celebrity_influencer/Banner4.PNG",
+      alt: "Sazan",
+    },
+  ];
+
   return (
     <div className="flex flex-col justify-center align-middle w-full h-full">
-      <TitleImage altText={"TEST"} src={"/TEST-IMAGE.jpg"} />
+      <TitleBanner images={images} />
       <TitleSplitter text={"Celebrity & Influencer"} />
       <MediaFeature
         imagePath={"/TEST-IMAGE.jpg"}

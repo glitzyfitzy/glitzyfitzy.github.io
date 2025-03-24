@@ -56,7 +56,7 @@ export const ImageCarousel = ({ images }) => {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {/* Hide scrollbar */}
-        <style jsx>{`
+        <style>{`
           .relative::-webkit-scrollbar {
             display: none;
           }
@@ -65,7 +65,7 @@ export const ImageCarousel = ({ images }) => {
         {/* Images */}
         {images.map((image, index) => (
           <div
-            key={image.id}
+            key={index}
             data-index={index}
             className="carousel-slide relative
           max-w-xs
@@ -88,9 +88,9 @@ export const ImageCarousel = ({ images }) => {
       <div className="flex justify-center mt-4 space-x-2">
         {images.map((image, index) => (
           <button
-            key={image.id}
+            key={index}
             onClick={() => scrollToImage(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`w-2 h-2 rounded-full transition-all ${
               activeIndex === index
                 ? "bg-accent w-6"
                 : "bg-black hover:bg-gray-400"

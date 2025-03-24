@@ -105,7 +105,7 @@ export const Header = () => {
       <h1 className="text-center text-8xl font-milton-one mb-2">
         Hayley Fitzsimmons
       </h1>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="w-full mx-auto px-4">
         <div className="flex justify-center">
           {/* Main Menu - Horizontal Tabs */}
           <div className="flex">
