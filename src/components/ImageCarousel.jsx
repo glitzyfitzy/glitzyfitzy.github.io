@@ -47,6 +47,10 @@ export const ImageCarousel = ({ images }) => {
     }
   };
 
+  const isVideo = (src) => {
+    return src.match(/\.(mp4|mov|webm|avi|wmv|flv|mkv)$/i);
+  };
+
   return (
     <div className="w-full mx-auto">
       {/* Carousel container */}
@@ -75,11 +79,17 @@ export const ImageCarousel = ({ images }) => {
           xl:max-w-md
           h-auto flex-shrink-0 snap-center mx-4"
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-cover"
-            />
+            {isVideo(image.src) ? (
+              <video className="w-full h-full object-cover" controls>
+                <source src={image.src} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover"
+              />
+            )}
           </div>
         ))}
       </div>
