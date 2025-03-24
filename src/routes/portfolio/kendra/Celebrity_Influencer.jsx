@@ -9,8 +9,9 @@ export const Celebrity_Influencer = () => {
       <TitleSplitter text={"Celebrity & Influencer"} />
       <MediaFeature
         imagePath={"/TEST-IMAGE.jpg"}
-        title={"TITLE"}
-        text={"TEodnfasodnfaisdnfaiosdnf;alsdfpoaundfas;kdjfna"}
+        text={
+          "I’ve had the unique opportunity to capture a diverse range of celebrities and influencers, creating dynamic social-first content that resonates with audiences. From country music stars to SEC quarterbacks, I’ve worked with a variety of talent, showcasing their personalities in ways that feel authentic and engaging. Whether it’s behind the scenes or in front of the camera, my focus has always been on crafting compelling content that drives engagement and sparks conversation."
+        }
       />
     </div>
   );
