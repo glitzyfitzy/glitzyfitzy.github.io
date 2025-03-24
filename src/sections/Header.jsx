@@ -203,7 +203,11 @@ export const Header = () => {
                               <span>{dropdownItem.title}</span>
                               {dropdownItem.subDropdown && (
                                 <svg
-                                  className={`w-4 h-4 ml-1 transition-transform duration-300 ${activeSubDropdowns.includes(dropdownItem.id) ? "transform rotate-180" : ""}`}
+                                  className={`w-4 h-4 ml-1 transition-transform duration-300 ${
+                                    activeSubDropdowns.includes(dropdownItem.id)
+                                      ? "transform rotate-180"
+                                      : ""
+                                  }`}
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -232,7 +236,7 @@ export const Header = () => {
                                       >
                                         {subDropdownItem.title}
                                       </a>
-                                    ),
+                                    )
                                   )}
                                 </div>
                               )}

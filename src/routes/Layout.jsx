@@ -1,6 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { Header } from "../sections/Header";
-import { Splitter } from "../components/Splitter";
+import { Splitter } from "../sections/Splitter";
 import { Footer } from "../sections/Footer";
 import { useState } from "react";
 import { SplashScreen } from "../sections/SplashScreen";
@@ -20,10 +20,6 @@ export const Layout = () => {
     }, 100);
   };
 
-  console.log(showSplash);
-  console.log(location.pathname);
-  console.log(showSplash && location.pathname === "/");
-
   useEffect(() => {
     if (showSplash && location.pathname === "/") {
       setShow(true);
@@ -34,14 +30,13 @@ export const Layout = () => {
   });
 
   return (
-    <div className="app-container">
+    // In your Layout component
+    <div className="app-container min-h-screen flex flex-col content-center">
       {show ? (
-        <>
-          <SplashScreen onDone={handleSplashComplete} />
-        </>
+        <SplashScreen onDone={handleSplashComplete} />
       ) : (
         <div
-          className="flex flex-col justify-center content-center h-screen bg-background"
+          className="flex flex-col min-h-screen justify-center bg-background overflow-y-auto mt-10 mb-10 ml-[10%] mr-[10%]"
           style={{
             opacity: opacity,
             transition: "opacity 1s ease-in",
@@ -49,9 +44,9 @@ export const Layout = () => {
         >
           <Header />
           <Splitter />
-          <main className="content">
-            <Outlet /> {/* This is where page content will be rendered */}
-          </main>
+          {/* <main className="content flex-grow"> */}
+          <Outlet /> {/* This is where page content will be rendered */}
+          {/* </main> */}
           <Splitter />
           <Footer />
         </div>

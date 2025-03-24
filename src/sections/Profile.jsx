@@ -22,11 +22,3 @@ export const Profile = () => {
     </div>
   );
 };
-
-// "
-// max-w-xs
-// sm:max-w-md
-// md:max-w-lg
-// lg:max-w-lg
-// xl:max-w-lg
-// h-auto"
