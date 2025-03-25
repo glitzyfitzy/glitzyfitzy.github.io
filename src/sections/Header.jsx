@@ -14,12 +14,6 @@ export const Header = () => {
       dropdown: null,
     },
     {
-      id: 2,
-      title: "About",
-      link: "/#/about",
-      dropdown: null,
-    },
-    {
       id: 3,
       title: "Portfolio",
       link: null, // unclickable
@@ -102,7 +96,7 @@ export const Header = () => {
 
   return (
     <nav className="flex flex-col justify-center">
-      <h1 className="text-center text-8xl font-milton-one mb-2">
+      <h1 className="text-center text-8xl font-milton-one mb-2 font-semibold">
         Hayley Fitzsimmons
       </h1>
       <div className="w-full mx-auto px-4">

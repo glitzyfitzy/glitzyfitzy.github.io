@@ -5,53 +5,38 @@ import { TitleSplitter } from "../../../sections/portfolio/TitleSplitter";
 
 export const Celebrity_Influencer = () => {
   const titleBannerImages = [
-    {
-      src: "/images/portfolio/kendra/celebrity_influencer/Banner1.PNG",
-      alt: "Amber",
-    },
-    {
-      src: "/images/portfolio/kendra/celebrity_influencer/Banner2.PNG",
-      alt: "Lainey",
-    },
-    {
-      src: "/images/portfolio/kendra/celebrity_influencer/Banner3.PNG",
-      alt: "Quinn",
-    },
-    {
-      src: "/images/portfolio/kendra/celebrity_influencer/Banner4.PNG",
-      alt: "Sazan",
-    },
+    "Banner1.PNG",
+    "Banner2.PNG",
+    "Banner3.PNG",
+    "Banner4.PNG",
   ];
+  let titleBanner = [];
+  for (const item of titleBannerImages) {
+    titleBanner.push({
+      src: "/images/portfolio/kendra/celebrity_influencer/banner/" + item,
+    });
+  }
 
-  const imageCarouselImages = [
-    {
-      src: "/images/portfolio/kendra/celebrity_influencer/Carousel1.MP4",
-      alt: "Quinn",
-    },
-    {
-      src: "/images/portfolio/kendra/celebrity_influencer/Carousel2.MP4",
-      alt: "Yellow Rose Dallas",
-    },
-    {
-      src: "/images/portfolio/kendra/celebrity_influencer/Carousel3.MP4",
-      alt: "Lainey",
-    },
-    {
-      src: "/images/portfolio/kendra/celebrity_influencer/Carousel4.MP4",
-      alt: "Mother's Day",
-    },
-    {
-      src: "/images/portfolio/kendra/celebrity_influencer/Carousel5.MP4",
-      alt: "Lainey",
-    },
+  const carouselItems = [
+    "Carousel1.MP4",
+    "Carousel2.MP4",
+    "Carousel3.MP4",
+    "Carousel4.MP4",
+    "Carousel5.MP4",
   ];
+  let imageCarousel = [];
+  for (const item of carouselItems) {
+    imageCarousel.push({
+      src: "/images/portfolio/kendra/celebrity_influencer/carousel/" + item,
+    });
+  }
 
   return (
     <div className="flex flex-col justify-center align-middle w-full h-full">
-      <TitleBanner images={titleBannerImages} />
+      <TitleBanner images={titleBanner} />
       <TitleSplitter text={"Celebrity & Influencer"} />
       <MediaFeature
-        images={imageCarouselImages}
+        images={imageCarousel}
         text={
           "I’ve had the unique opportunity to capture a diverse range of celebrities and influencers, creating dynamic social-first content that resonates with audiences. From country music stars to SEC quarterbacks, I’ve worked with a variety of talent, showcasing their personalities in ways that feel authentic and engaging. Whether it’s behind the scenes or in front of the camera, my focus has always been on crafting compelling content that drives engagement and sparks conversation."
         }

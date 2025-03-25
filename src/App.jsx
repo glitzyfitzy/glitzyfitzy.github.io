@@ -1,7 +1,6 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./routes/Home";
 import { Layout } from "./routes/Layout";
-import { About } from "./routes/About";
 import { Contact } from "./routes/Contact";
 import { Instagram } from "./routes/portfolio/kendra/Instagram";
 import { TikTok } from "./routes/portfolio/kendra/Tiktok";
@@ -20,7 +19,6 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
           <Route path="portfolio">
             <Route path="kendra">
               <Route path="instagram" element={<Instagram />} />

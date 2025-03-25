@@ -46,8 +46,6 @@ export const TikTok = () => {
     });
   }
 
-  console.log(titleBanner);
-
   return (
     <div className="flex flex-col justify-center align-middle w-full h-full">
       <TitleBanner images={titleBanner} />
