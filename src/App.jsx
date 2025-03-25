@@ -11,8 +11,10 @@ import { Photo_Shoot_BTS } from "./routes/portfolio/kendra/Photo_Shoot_BTS";
 import { Events } from "./routes/portfolio/kendra/Events";
 import { UT_Austin } from "./routes/portfolio/UT_Austin";
 import { Glitzy_Fitzy } from "./routes/Glitzy_Fitzy";
+import posthog from "posthog-js";
 
 export const App = () => {
+  posthog.capture("App Loaded", { property: "hello" });
   return (
     <HashRouter>
       <Routes>
