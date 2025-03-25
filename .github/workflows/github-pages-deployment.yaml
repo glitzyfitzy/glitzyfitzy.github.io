@@ -39,8 +39,8 @@ jobs:
         run: npm ci
       - name: Build
         env:
-          REACT_APP_PUBLIC_POSTHOG_HOST: ${{ secrets.REACT_APP_PUBLIC_POSTHOG_HOST }}
-          REACT_APP_PUBLIC_POSTHOG_KEY: ${{ secrets.REACT_APP_PUBLIC_POSTHOG_KEY }}
+          VITE_REACT_APP_PUBLIC_POSTHOG_HOST: ${{ secrets.VITE_REACT_APP_PUBLIC_POSTHOG_HOST }}
+          VITE_REACT_APP_PUBLIC_POSTHOG_KEY: ${{ secrets.VITE_REACT_APP_PUBLIC_POSTHOG_KEY }}
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
