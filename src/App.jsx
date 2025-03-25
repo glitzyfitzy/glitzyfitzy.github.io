@@ -14,7 +14,7 @@ import { Glitzy_Fitzy } from "./routes/Glitzy_Fitzy";
 import posthog from "posthog-js";
 
 export const App = () => {
-  posthog.capture("App Loaded", { property: "hello" });
+  posthog.capture("App Loaded", { property: "App loaded successfully" });
   return (
     <HashRouter>
       <Routes>
