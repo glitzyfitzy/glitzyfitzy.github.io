@@ -17,27 +17,22 @@ export const TikTok = () => {
   }
 
   const carouselItems = [
-    "Carousel2.jpeg",
-    "Carousel3.jpeg",
-    "Carousel5.jpeg",
-    "Carousel6.jpeg",
-    "Carousel7.MP4",
-    "Carousel8.MP4",
-    "Carousel9.MP4",
-    "Carousel10.MP4",
-    "Carousel11.MP4",
-    "Carousel12.MP4",
-    "Carousel13.MP4",
-    "Carousel14.MP4",
-    "Carousel15.MP4",
-    "Carousel16.MP4",
-    "Carousel17.MP4",
-    "Carousel18.MP4",
-    "Carousel19.MP4",
-    "Carousel20.MP4",
-    "Carousel21.MP4",
-    "Carousel22.MP4",
-    "Carousel23.MP4",
+    "TikTokCarousel1.MP4",
+    "TikTokCarousel2.MP4",
+    "TikTokCarousel3.jpeg",
+    "TikTokCarousel4.MP4",
+    "TikTokCarousel5.MP4",
+    "TikTokCarousel6.MP4",
+    "TikTokCarousel7.MP4",
+    "TikTokCarousel8.jpeg",
+    "TikTokCarousel9.MP4",
+    "TikTokCarousel10.MP4",
+    "TikTokCarousel11.MP4",
+    "TikTokCarousel12.MP4",
+    "TikTokCarousel13.jpeg",
+    "TikTokCarousel14.MP4",
+    "TikTokCarousel15.MP4",
+    "TikTokCarousel16.MP4",
   ];
   let imageCarousel = [];
   for (const item of carouselItems) {
@@ -53,7 +48,7 @@ export const TikTok = () => {
       <MediaFeature
         images={imageCarousel}
         text={
-          "I’ve had the unique opportunity to capture a diverse range of celebrities and influencers, creating dynamic social-first content that resonates with audiences. From country music stars to SEC quarterbacks, I’ve worked with a variety of talent, showcasing their personalities in ways that feel authentic and engaging. Whether it’s behind the scenes or in front of the camera, my focus has always been on crafting compelling content that drives engagement and sparks conversation."
+          "When I started as an intern at Kendra Scott, their TikTok following was at 50K. Over the years, I’ve played a key role in accelerating growth on the platform, helping to grow the account to 600K followers today—an impressive 44% increase year over year. By driving over 200M views annually, I helped establish Kendra Scott as a prominent brand on TikTok. This success can be attributed to the creative freedom and ideation I was given, allowing me to experiment with trends and produce fresh, engaging content that resonated with our audience."
         }
       />
     </div>

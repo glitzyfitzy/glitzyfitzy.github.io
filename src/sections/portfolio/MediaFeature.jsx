@@ -5,8 +5,8 @@ export const MediaFeature = ({ images, text }) => {
   return (
     <div className={`flex flex-col gap-4justify-center w-full my-6`}>
       {/* Content Section */}
-      <div className="flex flex-col justify-center  mb-10 mx-[20%]">
-        <p className="text-center text-text">{text}</p>
+      <div className="flex flex-col justify-center mb-10 mx-[15%]">
+        <p className="text-center text-text text-lg">{text}</p>
       </div>
 
       {/* Image Section */}
