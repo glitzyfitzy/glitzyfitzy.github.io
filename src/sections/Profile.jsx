@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 export const Profile = () => {
   const [isGifComplete, setIsGifComplete] = useState(false);
   const gifRef = useRef(null);
-  const gifUrl = "/profile-no-loop.gif";
+  const gifUrl = "/images/homepage/profile.gif";
 
   useEffect(() => {
     // First, reset the GIF

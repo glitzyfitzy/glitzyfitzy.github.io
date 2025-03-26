@@ -31,8 +31,8 @@ export const Header = () => {
             { id: 312, title: "TikTok", link: "/#/portfolio/kendra/tiktok" },
             {
               id: 313,
-              title: "College Tour",
-              link: "/#/portfolio/kendra/college_tour",
+              title: "College Tours",
+              link: "/#/portfolio/kendra/college_tours",
             },
             {
               id: 314,
@@ -41,10 +41,15 @@ export const Header = () => {
             },
             {
               id: 315,
+              title: "Collaborations",
+              link: "/#/portfolio/kendra/collaborations",
+            },
+            {
+              id: 316,
               title: "Photo Shoot BTS",
               link: "/#/portfolio/kendra/photo_shoot_bts",
             },
-            { id: 316, title: "Events", link: "/#/portfolio/kendra/events" },
+            { id: 317, title: "Events", link: "/#/portfolio/kendra/events" },
           ],
         },
         {
@@ -61,12 +66,12 @@ export const Header = () => {
       link: "/#/glitzy_fitzy",
       dropdown: null,
     },
-    {
-      id: 5,
-      title: "Contact",
-      link: "/#/contact",
-      dropdown: null,
-    },
+    // {
+    //   id: 5,
+    //   title: "Contact",
+    //   link: "/#/contact",
+    //   dropdown: null,
+    // },
   ];
 
   // Handler for mouse enter on main items

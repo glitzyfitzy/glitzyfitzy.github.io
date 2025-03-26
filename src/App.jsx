@@ -4,13 +4,14 @@ import { Layout } from "./routes/Layout";
 import { Contact } from "./routes/Contact";
 import { Instagram } from "./routes/portfolio/kendra/Instagram";
 import { TikTok } from "./routes/portfolio/kendra/Tiktok";
-import { College_Tour } from "./routes/portfolio/kendra/College_Tour";
+import { College_Tours } from "./routes/portfolio/kendra/College_Tours";
 import { Celebrity_Influencer } from "./routes/portfolio/kendra/Celebrity_Influencer";
 import { Photo_Shoot_BTS } from "./routes/portfolio/kendra/Photo_Shoot_BTS";
 import { Events } from "./routes/portfolio/kendra/Events";
 import { UT_Austin } from "./routes/portfolio/UT_Austin";
 import { Glitzy_Fitzy } from "./routes/Glitzy_Fitzy";
 import posthog from "posthog-js";
+import { Collaborations } from "./routes/portfolio/kendra/Collaborations";
 
 export const App = () => {
   posthog.capture("App Loaded", { property: "App loaded successfully" });
@@ -23,11 +24,12 @@ export const App = () => {
             <Route path="kendra">
               <Route path="instagram" element={<Instagram />} />
               <Route path="tiktok" element={<TikTok />} />
-              <Route path="college_tour" element={<College_Tour />} />
+              <Route path="college_tours" element={<College_Tours />} />
               <Route
                 path="celebrity_influencer"
                 element={<Celebrity_Influencer />}
               />
+              <Route path="collaborations" element={<Collaborations />} />
               <Route path="photo_shoot_bts" element={<Photo_Shoot_BTS />} />
               <Route path="events" element={<Events />} />
             </Route>
