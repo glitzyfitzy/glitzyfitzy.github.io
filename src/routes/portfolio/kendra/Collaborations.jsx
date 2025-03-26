@@ -5,23 +5,34 @@ import { TitleSplitter } from "../../../sections/portfolio/TitleSplitter";
 
 export const Collaborations = () => {
   const titleBannerImages = [
-    "Banner1.PNG",
-    "Banner1.PNG",
-    "Banner1.PNG",
-    "Banner1.PNG",
+    "CollabsBanner1.jpg",
+    "CollabsBanner2.jpg",
+    "CollabsBanner3.jpg",
+    "CollabsBanner4.jpg",
   ];
   let titleBanner = [];
   for (const item of titleBannerImages) {
     titleBanner.push({
-      src: "/images/portfolio/kendra/celebrity_influencer/banner/" + item,
+      src: "/images/portfolio/kendra/collabs/banner/" + item,
     });
   }
 
-  const carouselItems = ["Carousel1.MP4", "Carousel1.MP4", "Carousel1.MP4"];
+  const carouselItems = [
+    "Collabs1.jpeg",
+    "Collabs2.jpg",
+    "Collabs3.jpg",
+    "Collabs4.jpg",
+    "Collabs5.jpeg",
+    "Collabs6.jpeg",
+    "Collabs7.jpg",
+    "Collabs8.jpg",
+    "Collabs9.jpg",
+    "Collabs10.jpg",
+  ];
   let imageCarousel = [];
   for (const item of carouselItems) {
     imageCarousel.push({
-      src: "/images/portfolio/kendra/celebrity_influencer/carousel/" + item,
+      src: "/images/portfolio/kendra/collabs/carousel/" + item,
     });
   }
 

@@ -4,8 +4,8 @@ import { TitleSplitter } from "../../sections/portfolio/TitleSplitter";
 
 export const UT_Austin = () => {
   const titleBannerImages = [
-    "UTAustinBanner1.jpg",
-    "UTAustinBanner2.jpg",
+    "UTAustinBanner1.PNG",
+    "UTAustinBanner2.PNG",
     "UTAustinBanner3.PNG",
     "UTAustinBanner4.PNG",
   ];

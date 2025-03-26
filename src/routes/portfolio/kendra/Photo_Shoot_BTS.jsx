@@ -4,9 +4,9 @@ import { TitleSplitter } from "../../../sections/portfolio/TitleSplitter";
 
 export const Photo_Shoot_BTS = () => {
   const titleBannerImages = [
-    "BTSBanner1.jpg",
-    "BTSBanner2.jpg",
-    "BTSBanner3.jpg",
+    "BTSBanner1.PNG",
+    "BTSBanner2.PNG",
+    "BTSBanner3.PNG",
     "BTSBanner4.PNG",
   ];
   let titleBanner = [];
