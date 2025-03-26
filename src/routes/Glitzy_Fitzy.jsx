@@ -26,9 +26,6 @@ export const Glitzy_Fitzy = () => {
     "GlitzyFitzy7.mp4",
     "GlitzyFitzy8.jpg",
     "GlitzyFitzy9.mp4",
-    "GlitzyFitzy10.mp4",
-    "GlitzyFitzy11.mp4",
-    "GlitzyFitzy12.jpg",
   ];
   let imageCarousel = [];
   for (const item of carouselItems) {
