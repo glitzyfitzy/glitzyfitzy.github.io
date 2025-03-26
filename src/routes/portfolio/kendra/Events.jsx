@@ -4,10 +4,10 @@ import { TitleSplitter } from "../../../sections/portfolio/TitleSplitter";
 
 export const Events = () => {
   const titleBannerImages = [
-    "Events1.jpg",
+    "Events1.PNG",
     "Events2.jpg",
     "Events3.jpg",
-    "Events4.jpg",
+    "Events4.PNG",
   ];
   let titleBanner = [];
   for (const item of titleBannerImages) {
