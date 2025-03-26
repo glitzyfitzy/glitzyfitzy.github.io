@@ -16,11 +16,48 @@ export const Instagram = () => {
     });
   }
 
-  const carouselItems = ["Carousel1.MP4", "Carousel1.MP4", "Carousel1.MP4"];
-  let imageCarousel = [];
-  for (const item of carouselItems) {
-    imageCarousel.push({
-      src: "/images/portfolio/kendra/instagram/carousel/" + item,
+  const carouselPhotos = [
+    "Photos1.jpg",
+    "Photos2.jpg",
+    "Photos3.jpg",
+    "Photos4jpg",
+  ];
+  let photoCarousel = [];
+  for (const item of carouselPhotos) {
+    photoCarousel.push({
+      src: "/images/portfolio/kendra/instagram/carousel/photos/" + item,
+    });
+  }
+
+  const carouselReels = [
+    "Reels1.mp4",
+    "Reels2.MOV",
+    "Reels3.mp4",
+    "Reels4.mp4",
+  ];
+  let reelCarousel = [];
+  for (const item of carouselReels) {
+    reelCarousel.push({
+      src: "/images/portfolio/kendra/instagram/carousel/reels/" + item,
+    });
+  }
+
+  const storiesPhotos = [
+    "Stories1.jpg",
+    "Stories2.jpg",
+    "Stories3.jpg",
+    "Stories4.jpg",
+    "Stories5.jpg",
+    "Stories6.jpg",
+    "Stories7.jpg",
+    "Stories8.jpg",
+    "Stories9.jpg",
+    "Stories10.jpg",
+  ];
+  let storiesCarousel = [];
+  for (const item of storiesPhotos) {
+    storiesCarousel.push({
+      src: "/images/portfolio/kendra/instagram/carousel/stories/" + item,
     });
   }
 
@@ -29,11 +66,13 @@ export const Instagram = () => {
       <TitleBanner images={titleBanner} />
       <TitleSplitter text={"Instagram"} />
       <MediaFeature
-        images={imageCarousel}
+        images={photoCarousel}
         text={
-          "I played a pivotal role in creating and managing content for Kendra Scott’s Instagram, helping to refine and polish the brand’s social identity. I was responsible for capturing a wide range of content, from showcasing the brand’s products and behind-the-scenes moments to highlighting people and events closely tied to Kendra Scott’s values and aesthetic. My work ensured that each post reflected the brand’s core messaging, while maintaining a cohesive and visually engaging feed that resonated with our community and helped strengthen brand loyalty."
+          "I played a pivotal role in creating and managing content for Kendra Scott’s Instagram, helping to refine and polish the brand’s social identity. I was responsible for capturing a wide range of content, from showcasing the brand’s products and behind-the-scenes moments to highlighting people and events closely tied to Kendra Scott’s values and aesthetic. Well-versed in creating content across Instagram stories, reels, and in-feed images, I ensured each format was used to its fullest potential to engage and inspire our audience. My work ensured that each post reflected the brand’s core messaging, while maintaining a cohesive and visually engaging feed that resonated with our community and helped strengthen brand loyalty."
         }
       />
+      <MediaFeature images={reelCarousel} text={null} />
+      <MediaFeature images={storiesCarousel} text={null} />
     </div>
   );
 };
