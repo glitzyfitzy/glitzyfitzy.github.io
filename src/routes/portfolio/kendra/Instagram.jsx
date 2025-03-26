@@ -20,7 +20,12 @@ export const Instagram = () => {
     "Photos1.jpg",
     "Photos2.jpg",
     "Photos3.jpg",
-    "Photos4jpg",
+    "Photos4.jpg",
+    "Photos5.jpg",
+    "Photos6.jpg",
+    "Photos7.jpg",
+    "Photos8.jpeg",
+    "Photos9.JPG",
   ];
   let photoCarousel = [];
   for (const item of carouselPhotos) {
@@ -34,6 +39,9 @@ export const Instagram = () => {
     "Reels2.MOV",
     "Reels3.mp4",
     "Reels4.mp4",
+    "Reels5.mp4",
+    "Reels6.mp4",
+    "Reels7.mp4",
   ];
   let reelCarousel = [];
   for (const item of carouselReels) {
@@ -53,6 +61,16 @@ export const Instagram = () => {
     "Stories8.jpg",
     "Stories9.jpg",
     "Stories10.jpg",
+    "Stories11-1.jpg",
+    "Stories11.jpg",
+    "Stories12.jpg",
+    "Stories13.jpg",
+    "Stories14.jpg",
+    "Stories15.jpg",
+    "Stories16.jpg",
+    "Stories17.jpg",
+    "Stories18.jpg",
+    "Stories19.jpg",
   ];
   let storiesCarousel = [];
   for (const item of storiesPhotos) {
