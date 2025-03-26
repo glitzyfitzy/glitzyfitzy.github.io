@@ -40,6 +40,7 @@ export const Instagram = () => {
     "Reels3.mp4",
     "Reels4.mp4",
     "Reels5.mp4",
+    "Reels6.mp4",
     "Reels7.mp4",
   ];
   let reelCarousel = [];
