@@ -4,15 +4,15 @@ import { TitleSplitter } from "../../../sections/portfolio/TitleSplitter";
 
 export const Instagram = () => {
   const titleBannerImages = [
-    "Banner1.PNG",
-    "Banner1.PNG",
-    "Banner1.PNG",
-    "Banner1.PNG",
+    "InstaBanner1.PNG",
+    "InstaBanner2.PNG",
+    "InstaBanner3.PNG",
+    "InstaBanner4.PNG",
   ];
   let titleBanner = [];
   for (const item of titleBannerImages) {
     titleBanner.push({
-      src: "/images/portfolio/kendra/celebrity_influencer/banner/" + item,
+      src: "/images/portfolio/kendra/instagram/banner/" + item,
     });
   }
 
@@ -20,7 +20,7 @@ export const Instagram = () => {
   let imageCarousel = [];
   for (const item of carouselItems) {
     imageCarousel.push({
-      src: "/images/portfolio/kendra/celebrity_influencer/carousel/" + item,
+      src: "/images/portfolio/kendra/instagram/carousel/" + item,
     });
   }
 

@@ -4,23 +4,28 @@ import { TitleSplitter } from "../../sections/portfolio/TitleSplitter";
 
 export const UT_Austin = () => {
   const titleBannerImages = [
-    "Banner1.PNG",
-    "Banner1.PNG",
-    "Banner1.PNG",
-    "Banner1.PNG",
+    "UTAustinBanner1.jpg",
+    "UTAustinBanner2.jpg",
+    "UTAustinBanner3.PNG",
+    "UTAustinBanner4.PNG",
   ];
   let titleBanner = [];
   for (const item of titleBannerImages) {
     titleBanner.push({
-      src: "/images/portfolio/kendra/celebrity_influencer/banner/" + item,
+      src: "/images/portfolio/ut_austin/banner/" + item,
     });
   }
 
-  const carouselItems = ["Carousel1.MP4", "Carousel1.MP4", "Carousel1.MP4"];
+  const carouselItems = [
+    "UTAustin1.mp4",
+    "UTAustin2.mp4",
+    "UTAustin3.mp4",
+    "UTAustin4.mp4",
+  ];
   let imageCarousel = [];
   for (const item of carouselItems) {
     imageCarousel.push({
-      src: "/images/portfolio/kendra/celebrity_influencer/carousel/" + item,
+      src: "/images/portfolio/ut_austin/carousel/" + item,
     });
   }
 

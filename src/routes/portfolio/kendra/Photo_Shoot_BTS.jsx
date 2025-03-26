@@ -4,23 +4,28 @@ import { TitleSplitter } from "../../../sections/portfolio/TitleSplitter";
 
 export const Photo_Shoot_BTS = () => {
   const titleBannerImages = [
-    "Banner1.PNG",
-    "Banner1.PNG",
-    "Banner1.PNG",
-    "Banner1.PNG",
+    "BTSBanner1.jpg",
+    "BTSBanner2.jpg",
+    "BTSBanner3.jpg",
+    "BTSBanner4.PNG",
   ];
   let titleBanner = [];
   for (const item of titleBannerImages) {
     titleBanner.push({
-      src: "/images/portfolio/kendra/celebrity_influencer/banner/" + item,
+      src: "/images/portfolio/kendra/photo_shoot_bts/banner/" + item,
     });
   }
 
-  const carouselItems = ["Carousel1.MP4", "Carousel1.MP4", "Carousel1.MP4"];
+  const carouselItems = [
+    "BTSCarousel1.mp4",
+    "BTSCarousel2.mp4",
+    "BTSCarousel3.mp4",
+    "BTSCarousel4.mp4",
+  ];
   let imageCarousel = [];
   for (const item of carouselItems) {
     imageCarousel.push({
-      src: "/images/portfolio/kendra/celebrity_influencer/carousel/" + item,
+      src: "/images/portfolio/kendra/photo_shoot_bts/carousel/" + item,
     });
   }
 

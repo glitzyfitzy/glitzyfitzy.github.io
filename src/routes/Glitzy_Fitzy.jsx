@@ -4,15 +4,15 @@ import { TitleSplitter } from "../sections/portfolio/TitleSplitter";
 
 export const Glitzy_Fitzy = () => {
   const titleBannerImages = [
-    "Banner1.PNG",
-    "Banner1.PNG",
-    "Banner1.PNG",
-    "Banner1.PNG",
+    "GlitzyFitzyBanner1.jpg",
+    "GlitzyFitzyBanner2.jpg",
+    "GlitzyFitzyBanner3.jpg",
+    "GlitzyFitzyBanner4.jpg",
   ];
   let titleBanner = [];
   for (const item of titleBannerImages) {
     titleBanner.push({
-      src: "/images/portfolio/kendra/celebrity_influencer/banner/" + item,
+      src: "/images/glitzyfitzy/banner/" + item,
     });
   }
 
@@ -33,7 +33,7 @@ export const Glitzy_Fitzy = () => {
   let imageCarousel = [];
   for (const item of carouselItems) {
     imageCarousel.push({
-      src: "/images/glitzyfitzy/" + item,
+      src: "/images/glitzyfitzy/carousel/" + item,
     });
   }
 

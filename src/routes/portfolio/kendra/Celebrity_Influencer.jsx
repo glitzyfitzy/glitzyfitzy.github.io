@@ -18,11 +18,13 @@ export const Celebrity_Influencer = () => {
   }
 
   const carouselItems = [
-    "Carousel1.MP4",
-    "Carousel2.MP4",
-    "Carousel3.MP4",
-    "Carousel4.MP4",
-    "Carousel5.MP4",
+    "CelebInfluencerCarousel1.MP4",
+    "CelebInfluencerCarousel2.mp4",
+    "CelebInfluencerCarousel3.MP4",
+    "CelebInfluencerCarousel4.MP4",
+    "CelebInfluencerCarousel5.MP4",
+    "CelebInfluencerCarousel6.mp4",
+    "CelebInfluencerCarousel7.mp4",
   ];
   let imageCarousel = [];
   for (const item of carouselItems) {
