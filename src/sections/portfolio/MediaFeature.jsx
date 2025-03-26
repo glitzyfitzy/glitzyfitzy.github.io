@@ -12,9 +12,11 @@ export const MediaFeature = ({ images, text }) => {
       )}
 
       {/* Image Section */}
-      <div className="flex w-full justify-center">
-        <ImageCarousel images={images} />
-      </div>
+      {images && (
+        <div className="flex w-full justify-center">
+          <ImageCarousel images={images} />
+        </div>
+      )}
     </div>
   );
 };

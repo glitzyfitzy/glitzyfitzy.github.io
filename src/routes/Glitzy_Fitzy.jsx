@@ -44,6 +44,13 @@ export const Glitzy_Fitzy = () => {
           "A dynamic and vibrant micro-influencer who brings a unique blend of bold glamour and playful charm to the world of fashion and beauty. With a keen eye for stylish trends and a love for all things sparkly and chic, I create content that is both luxurious and accessible, appealing to an audience that craves modern elegance with a touch of fun. Whether it's eye-catching outfits, vibrant decor, or colorful accessories, I know how to curate a feed that feels exciting, fresh, and stylishly on-brand for the trend-forward community."
         }
       />
+      <TitleSplitter text={"Brands I’ve Partnered With"} />
+      <MediaFeature
+        images={null}
+        text={
+          "H-E-B, Sezane, Lucchese, Justin’s Boots, VS Pink, Hammitt, Nivea, Poppi, Target, Nuuly, Alice + Olivia"
+        }
+      />
     </div>
   );
 };
